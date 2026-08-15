@@ -5,9 +5,11 @@
 {% block body %}
     <h1>Flights {{flight.id}} </h1>
     <ul>
+        <li>Flight Number : {{flight.id}} </li>
         <li>Origin: {{flight.origin}} </li>
         <li>Destination : {{flight.destination}}</li>
         <li>Duration : {{flight.duration}} </li>
+        <li>valid : {{flight.is_valid_flight}} </li>
     </ul>
     <h2>Passengers</h2>
     <ul>
