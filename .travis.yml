@@ -1,0 +1,7 @@
+language: pyhton
+python:
+  - 3.13.9
+install:
+  - pip install -r requrements.txt
+script:
+  - pyhton manage.py test
