@@ -27,9 +27,9 @@ def book(request,flight_id):
     except KeyError:
         return render(request,"flights/error.html",{"message":"No Selection"})
     except Flight.DoesNotExist:
-        return render(request,"flightserror.html",{"message":"No Flight"})
+        return render(request,"flights/error.html",{"message":"No Flight"})
     except Passenger.DoesNotExist:
-        return render(request,"flightserror.html",{"message":"No Passenger"})
+        return render(request,"flights/error.html",{"message":"No Passenger"})
     passenger.flights.add(flight)
     return HttpResponseRedirect(reverse("flight", args=(flight_id,)))
      
